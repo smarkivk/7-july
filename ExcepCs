@@ -1,0 +1,22 @@
+package com.dealsapp.catalogue_mcs.exception;//6
+
+import org.springframework.http.HttpStatus;
+
+public class ApiException {// CALLS from CONTROLLER
+	private final String message;
+	private final HttpStatus httpStatus;//for postamn to have message which is usually is shown here
+	
+	public ApiException(String message, HttpStatus httpStatus) {//param constr
+
+		this.message = message;//why value is assigned by 2 ways value assign getter const and setter const
+		this.httpStatus = httpStatus;//t
+	}
+	public String getMessage() {
+		return message;//helps to run as it is private
+	}
+
+	public HttpStatus getHttpStatus() {
+		return httpStatus;
+	}
+
+}
